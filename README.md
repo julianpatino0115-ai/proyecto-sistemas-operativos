@@ -29,6 +29,7 @@ Para validar la correcta instalación y los recursos del sistema desde la termin
 1. *Verificación de la Distribución y Versión:*
 ![Entorno Pop!_OS](./evidencias/particiones.jpeg)
 ![Entorno Pop!_OS](./evidencias/lsblk.jpeg)
+![Entorno Pop!_OS](./evidencias/ssh.jpeg)
 #ip a, ssh , lsblk, cat /etc/os-release
 ---
 
@@ -38,15 +39,15 @@ En esta fase se construyó una arquitectura multicontenedor utilizando Docker Co
 
 ### 📸 Evidencias de Ejecución:
 1. *Compilación del entorno:*
-   ![Docker Build](./evidencias/docker_build.jpeg)
+   ![Docker Build](./evidencias/docker_compose.jpeg)
    (Aquí poner la captura del comando docker compose up -d --build funcionando).
 
 2. *Verificación del Frontend (Nginx):*
-   ![Frontend Activo](./evidencias/docker_frontend.jpeg)
+   ![Frontend Activo](./evidencias/front_activo.jpeg)
    (Aquí poner la captura del navegador en http://localhost o el resultado del curl http://localhost).
 
 3. *Verificación del Backend (Python JSON):*
-   ![Backend Activo](./evidencias/docker_backend.jpeg)
+   ![Backend Activo](./evidencias/host_5000.jpeg)
    (Aquí poner la captura del curl http://localhost:5000 donde responde el JSON).
 
 ---
