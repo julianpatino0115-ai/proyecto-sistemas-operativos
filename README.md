@@ -12,6 +12,27 @@
 * *Imagen Base de Docker:* rockylinux:9
 
 ---
+## 🖥️ Componente 1: Configuración del Entorno Virtual
+
+En esta fase inicial se realizó el aprovisionamiento y la configuración del entorno hipervisor utilizando *VirtualBox* para desplegar la distribución gráfica asignada al equipo.
+
+### ⚙️ Especificaciones de la Máquina Virtual:
+* *Sistema Operativo Anfitrión:* Windows 11 pro
+* *Sistema Operativo Invitado (Asignado):* Pop!_OS 
+* *Memoria RAM Asignada:* 4096 MB (4 GB)
+* *Procesadores (vCPUs):* 2 Cores
+* *Almacenamiento Virtual:* 25 GB - 40 GB (Dinámicamente asignado)
+
+### 📊 Comandos de Diagnóstico del Sistema Operativo:
+Para validar la correcta instalación y los recursos del sistema desde la terminal de Pop!_OS, se ejecutaron los siguientes comandos:
+
+1. *Verificación de la Distribución y Versión:*
+   ```bash
+   neofetch
+   # O en su defecto:
+   cat /etc/os-release
+   
+---
 
 ## 🐳 Componente 2: Contenedores Docker
 
