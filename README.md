@@ -28,6 +28,7 @@ Para validar la correcta instalación y los recursos del sistema desde la termin
 
 1. *Verificación de la Distribución y Versión:*
 ![Entorno Pop!_OS](./evidencias/particiones.jpeg)
+![Entorno Pop!_OS](./evidencias/lsblk.jpeg)
 #ip a, ssh , lsblk, cat /etc/os-release
 ---
 
