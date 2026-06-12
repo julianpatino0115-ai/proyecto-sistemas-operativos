@@ -27,7 +27,7 @@ En esta fase inicial se realizó el aprovisionamiento y la configuración del en
 Para validar la correcta instalación y los recursos del sistema desde la terminal de Pop!_OS, se ejecutaron los siguientes comandos:
 
 1. *Verificación de la Distribución y Versión:*
-![Entorno Pop!_OS](./evidencias/c1_entorno.jpeg)
+![Entorno Pop!_OS](./evidencias/particiones.jpeg)
 #ip a, ssh , lsblk, cat /etc/os-release
 ---
 
