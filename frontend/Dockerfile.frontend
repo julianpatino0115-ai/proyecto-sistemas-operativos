@@ -1,0 +1,13 @@
+FROM rockylinux:9
+
+# Instalar Nginx usando dnf (gestor de Rocky Linux)
+RUN dnf install -y nginx && dnf clean all
+
+# Copiar el archivo HTML personalizado a la ruta correcta de Rocky Linux
+COPY index.html /usr/share/nginx/html/index.html
+
+# Exponer el puerto 80
+EXPOSE 80
+
+# Comando para ejecutar Nginx en primer plano
+CMD ["nginx", "-g", "daemon off;"]

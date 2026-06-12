@@ -1,0 +1,31 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.frontend
+      network: host
+    container_name: proyecto-frontend
+    ports:
+      - "80:80"
+    volumes:
+      # Ruta ajustada estrictamente para Rocky Linux (Fedora/RedHat)
+      - ./frontend:/usr/share/nginx/html
+    restart: unless-stopped
+    networks:
+      - proyecto-network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.backend
+      network: host
+    container_name: proyecto-backend
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+    networks:
+      - proyecto-network
+
+networks:
+  proyecto-network:
+    driver: bridge
