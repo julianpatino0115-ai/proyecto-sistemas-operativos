@@ -27,11 +27,8 @@ En esta fase inicial se realizó el aprovisionamiento y la configuración del en
 Para validar la correcta instalación y los recursos del sistema desde la terminal de Pop!_OS, se ejecutaron los siguientes comandos:
 
 1. *Verificación de la Distribución y Versión:*
-   ```bash
-   neofetch
-   # O en su defecto:
-   cat /etc/os-release
-   
+![Entorno Pop!_OS](./evidencias/c1_entorno.jpeg)
+#ip a, ssh , lsblk, cat /etc/os-release
 ---
 
 ## 🐳 Componente 2: Contenedores Docker
@@ -40,15 +37,15 @@ En esta fase se construyó una arquitectura multicontenedor utilizando Docker Co
 
 ### 📸 Evidencias de Ejecución:
 1. *Compilación del entorno:*
-   ![Docker Build](./evidencias/docker_build.jpg)
+   ![Docker Build](./evidencias/docker_build.jpeg)
    (Aquí poner la captura del comando docker compose up -d --build funcionando).
 
 2. *Verificación del Frontend (Nginx):*
-   ![Frontend Activo](./evidencias/docker_frontend.jpg)
+   ![Frontend Activo](./evidencias/docker_frontend.jpeg)
    (Aquí poner la captura del navegador en http://localhost o el resultado del curl http://localhost).
 
 3. *Verificación del Backend (Python JSON):*
-   ![Backend Activo](./evidencias/docker_backend.png)
+   ![Backend Activo](./evidencias/docker_backend.jpeg)
    (Aquí poner la captura del curl http://localhost:5000 donde responde el JSON).
 
 ---
@@ -59,15 +56,15 @@ Se migró y orquestó el servicio de Nginx utilizando un clúster local de Kuber
 
 ### 📸 Evidencias de Ejecución:
 1. *Despliegue Inicial (2 Réplicas):*
-   ![Kubernetes Pods](./evidencias/k8s_pods_inicial.jpg)
+   ![Kubernetes Pods](./evidencias/k8s_pods_inicial.jpeg)
    (Aquí va la captura de los comandos kubectl get pods y kubectl get svc con el puerto 30080).
 
 2. *Acceso mediante el servicio NodePort:*
-   ![Navegador Kubernetes](./evidencias/k8s_browser.jpg)
+   ![Navegador Kubernetes](./evidencias/k8s_browser.jpeg)
    (Aquí va la captura del navegador web cargando la URL generada por minikube service nginx --url).
 
 3. *Escalabilidad Horizontal Activa (3 Réplicas):*
-   ![Kubernetes Escalado](./evidencias/k8s_escalado.jpg)
+   ![Kubernetes Escalado](./evidencias/k8s_escalado.jpeg)
    (Aquí va la captura de la terminal mostrando las 3 filas de Pods en ejecución tras el comando scale).
 
 ---
