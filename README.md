@@ -58,24 +58,24 @@ Se migró y orquestó el servicio de Nginx utilizando un clúster local de Kuber
 
 ### 📸 Evidencias de Ejecución:
 1. *Despliegue Inicial (2 Réplicas):*
-   ![Kubernetes Pods](./evidencias/k8s_pods_inicial.jpeg)
+   ![Kubernetes Pods](./evidencias/kubepods_svc.jpeg)
    (Aquí va la captura de los comandos kubectl get pods y kubectl get svc con el puerto 30080).
 
 2. *Acceso mediante el servicio NodePort:*
-   ![Navegador Kubernetes](./evidencias/k8s_browser.jpeg)
+   ![Navegador Kubernetes](./evidencias/url.jpeg)
    (Aquí va la captura del navegador web cargando la URL generada por minikube service nginx --url).
 
 3. *Escalabilidad Horizontal Activa (3 Réplicas):*
-   ![Kubernetes Escalado](./evidencias/k8s_escalado.jpeg)
+   ![Kubernetes Escalado](./evidencias/scale.jpeg)
    (Aquí va la captura de la terminal mostrando las 3 filas de Pods en ejecución tras el comando scale).
 
 ---
 
 ## 🧠 Conclusiones Técnicas y Lecciones Aprendidas
 
-1. *Gestión de Entornos RedHat/Fedora:* El uso de la imagen base rockylinux:9 exigió cambiar los flujos de trabajo tradicionales de Debian/Ubuntu (apt) hacia el gestor de paquetes dnf. Además, se comprendió la importancia de las rutas de configuración nativas, mapeando los volúmenes del Frontend estrictamente en /usr/share/nginx/html.
+1. *Gestión de Entornos RedHat/Fedora:* El uso de la imagen base rockylinux:9 exigió cambiar los flujos de trabajo tradicionales de Debian/Ubuntu (apt) hacia el gestor de paquetes dnf. Además, se entendio la importancia de las rutas de configuración nativas, organizando el Frontend  en /usr/share/nginx/html.
 2. *Sensibilidad de Sintaxis en Python:* Durante el desarrollo del backend se enfrentaron errores críticos de indentación (IndentationError) y de orden de parámetros posicionales (SyntaxError), reforzando la necesidad de mantener un formateo limpio y estricto del código en entornos de producción.
-3. *Orquestación en Capas:* Se evidenció la diferencia operativa entre Docker Compose (ideal para desarrollo local y acoplamiento simple) y Kubernetes/Minikube, el cual abstrae la infraestructura permitiendo escalamiento bajo demanda con un solo comando sin interrumpir el servicio.
+3. *Orquestación en Capas:* Se evidenció la diferencia operativa entre Docker Compose (ideal para desarrollo local y entendimiento simple) y Kubernetes/Minikube, el cual sustrae la infraestructura permitiendo escalamiento bajo demanda con un solo comando sin interrumpir el servicio.
 
 ---
 
